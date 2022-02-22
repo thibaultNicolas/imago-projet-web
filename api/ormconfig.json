@@ -1,0 +1,10 @@
+{
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "username": "root",
+    "password": "my-secret-pw",
+    "database": "imago",
+    "entities": ["dist/entities/*.entity{.ts,.js}"],
+    "synchronize": false
+  }

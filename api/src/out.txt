@@ -1,0 +1,13 @@
+D:\Projets\imago-project\projetSession\api\src\entities\AccesUtilisateur.entity.ts
+D:\Projets\imago-project\projetSession\api\src\entities\Clients.entity.ts
+D:\Projets\imago-project\projetSession\api\src\entities\Etat.entity.ts
+D:\Projets\imago-project\projetSession\api\src\entities\Fichier.entity.ts
+D:\Projets\imago-project\projetSession\api\src\entities\FichierProjet.entity.ts
+D:\Projets\imago-project\projetSession\api\src\entities\HistoriqueAvisCourriel.entity.ts
+D:\Projets\imago-project\projetSession\api\src\entities\Indice.entity.ts
+D:\Projets\imago-project\projetSession\api\src\entities\IndiceProjet.entity.ts
+D:\Projets\imago-project\projetSession\api\src\entities\Livrable.entity.ts
+D:\Projets\imago-project\projetSession\api\src\entities\Projet.entity.ts
+D:\Projets\imago-project\projetSession\api\src\entities\Temps.entity.ts
+D:\Projets\imago-project\projetSession\api\src\entities\user.entity.ts
+D:\Projets\imago-project\projetSession\api\src\entities\Utilisateur.entity.ts

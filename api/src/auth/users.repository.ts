@@ -17,7 +17,7 @@ export class UsersRepository extends Repository<Utilisateur>{
         //console.log('salt', salt);
         //console.log('hash', hashPassword);
 
-        const user = this.create({ prenom, nom, courriel, username, password, noAcces, indInactif, indAccesFichierEnteteProjet, indDispoListeChargesProjet });
+        const user = this.create({ prenom, nom, courriel, username, password: hashPassword, noAcces, indInactif, indAccesFichierEnteteProjet, indDispoListeChargesProjet });
 
 
         try {

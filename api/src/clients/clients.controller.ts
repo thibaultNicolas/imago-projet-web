@@ -1,9 +1,11 @@
-import { Body, Controller, Get, Param, Put, Post, Delete } from '@nestjs/common';
+import { Body, Controller, Get, Param, Put, Post, Delete, UseGuards } from '@nestjs/common';
 import { ClientsService } from './clients.service';
 import { ParseIntPipe } from '@nestjs/common/pipes/parse-int.pipe';
 import { Clients, ClientSearch } from '../entities/clients.entity'
+import { AuthGuard } from '@nestjs/passport';
 
 @Controller('clients')
+@UseGuards(AuthGuard())
 export class ClientsController {
     constructor(private readonly clientService: ClientsService) { }
     @Get()

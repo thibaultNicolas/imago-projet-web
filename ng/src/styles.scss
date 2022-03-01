@@ -1,1 +1,88 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+// Generate series of `.navbar-expand-*` responsive classes for configuring
+// where your navbar collapses.
+.navbar-expand {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+
+    // stylelint-disable-next-line scss/selector-no-union-class-name
+    &#{$infix} {
+      @include media-breakpoint-up($next) {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+
+        .navbar-nav {
+          flex-direction: row;
+
+          .dropdown-menu {
+            position: absolute;
+          }
+
+          .nav-link {
+            padding-right: $navbar-nav-link-padding-x;
+            padding-left: $navbar-nav-link-padding-x;
+          }
+        }
+
+        .navbar-nav-scroll {
+          overflow: visible;
+        }
+
+        .navbar-collapse {
+          display: flex !important; // stylelint-disable-line declaration-no-important
+          flex-basis: auto;
+        }
+
+        .navbar-toggler {
+          display: none;
+        }
+
+        .offcanvas-header {
+          display: none;
+        }
+
+        .offcanvas {
+          position: inherit;
+          bottom: 0;
+          z-index: 1000;
+          flex-grow: 1;
+          visibility: visible !important; // stylelint-disable-line declaration-no-important
+          background-color: transparent;
+          border-right: 0;
+          border-left: 0;
+          @include transition(none);
+          transform: none;
+        }
+        .offcanvas-top,
+        .offcanvas-bottom {
+          height: auto;
+          border-top: 0;
+          border-bottom: 0;
+        }
+
+        .offcanvas-body {
+          display: flex;
+          flex-grow: 0;
+          padding: 0;
+          overflow-y: visible;
+        }
+      }
+    }
+  }
+}
